@@ -1,6 +1,9 @@
 import React from "react"
 import { Link, useStaticQuery, graphql } from "gatsby"
+import Img from "gatsby-image"
 import Layout from "../components/Layout"
+
+import blogStyles from "./blog.module.scss"
 
 export default function Blog() {
     const data = useStaticQuery(
@@ -14,6 +17,13 @@ export default function Blog() {
                             frontmatter {
                                 title
                                 date(formatString: "DD MMMM, YYYY")
+                                featured {
+                                    childImageSharp {
+                                        fluid(maxWidth: 750) {
+                                            ...GatsbyImageSharpFluid
+                                        }
+                                    }
+                                }
                             }
                             timeToRead
                             excerpt
@@ -30,23 +40,36 @@ export default function Blog() {
 
     return (
         <Layout>
-            <ul>
+            <ul className={blogStyles.posts}>
                 {data.allMarkdownRemark.edges.map(edge => {
                     return (
-                        <li key={edge.node.id}>
+                        <li key={edge.node.id} className={blogStyles.post}>
                             <h2>
                                 <Link to={`/blog/${edge.node.fields.slug}`}>
                                     {edge.node.frontmatter.title}
                                 </Link>
                             </h2>
-                            <div>
+                            <div className={blogStyles.meta}>
                                 <span>
-                                    Posted on {edge.node.frontmatter.date}
-                                </span>{" "}
-                                / <span>{edge.node.timeToRead} min read</span>
+                                    Posted on {edge.node.frontmatter.date}{" "}
+                                    <span> / </span> {edge.node.timeToRead} min
+                                    read
+                                </span>
                             </div>
-                            <p>{edge.node.excerpt}</p>
-                            <div>
+                            {edge.node.frontmatter.featured && (
+                                <Img
+                                    className={blogStyles.featured}
+                                    fluid={
+                                        edge.node.frontmatter.featured
+                                            .childImageSharp.fluid
+                                    }
+                                    alt={edge.node.frontmatter.title}
+                                />
+                            )}
+                            <p className={blogStyles.excerpt}>
+                                {edge.node.excerpt}
+                            </p>
+                            <div className={blogStyles.button}>
                                 <Link to={`/blog/${edge.node.fields.slug}`}>
                                     Read More
                                 </Link>
