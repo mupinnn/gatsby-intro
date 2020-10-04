@@ -5,6 +5,7 @@
  */
 
 module.exports = {
+    pathPrefix: "/gatsby-intro",
     siteMetadata: {
         title: "Faqih",
         description: "Just a simple blog built with GatsbyJS",
