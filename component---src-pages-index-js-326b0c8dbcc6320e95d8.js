@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[9],{RXBc:function(e,t,n){"use strict";n.r(t),n.d(t,"default",(function(){return s}));var a=n("q1tI"),i=n.n(a),l=n("7oih"),r=n("EYWl");function s(){return i.a.createElement(l.a,null,i.a.createElement(r.a,{title:"Home",description:"This is my home page"}),i.a.createElement("h1",null,"Home page"),i.a.createElement("h2",null,"Hi! This is my first GatsbyJS site."))}}}]);
+//# sourceMappingURL=component---src-pages-index-js-326b0c8dbcc6320e95d8.js.map

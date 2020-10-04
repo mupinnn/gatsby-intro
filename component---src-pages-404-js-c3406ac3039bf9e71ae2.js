@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[5],{w2l6:function(e,t,n){"use strict";n.r(t),n.d(t,"default",(function(){return i}));var a=n("q1tI"),l=n.n(a),o=n("Wbzz"),r=n("7oih"),c=n("EYWl");function i(){return l.a.createElement(r.a,null,l.a.createElement(c.a,{title:"Oops!",description:"This is my 404 page"}),l.a.createElement("h1",null,"404: Page Not Found"),l.a.createElement("p",null,l.a.createElement(o.a,{to:"/blog/"},"Check our latest articles")))}}}]);
+//# sourceMappingURL=component---src-pages-404-js-c3406ac3039bf9e71ae2.js.map

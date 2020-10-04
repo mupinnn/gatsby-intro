@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[8],{"Cuy+":function(n,e,t){"use strict";t.r(e),t.d(e,"default",(function(){return l}));var a=t("q1tI"),c=t.n(a),i=t("7oih"),u=t("EYWl");function l(){return c.a.createElement(i.a,null,c.a.createElement(u.a,{title:"Contact",description:"This is my contact page"}),c.a.createElement("h1",null,"Contact page"),c.a.createElement("p",null,"Find me on github/mupinnn"))}}}]);
+//# sourceMappingURL=component---src-pages-contact-js-0aa63e5fed5aadb0c01c.js.map
