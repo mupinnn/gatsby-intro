@@ -2,6 +2,7 @@ import React from "react"
 import { Link, useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import Layout from "../components/Layout"
+import SEO from "../components/SEO"
 
 import blogStyles from "./blog.module.scss"
 
@@ -40,6 +41,7 @@ export default function Blog() {
 
     return (
         <Layout>
+            <SEO title="Blog" description="This is my blog page" />
             <ul className={blogStyles.posts}>
                 {data.allMarkdownRemark.edges.map(edge => {
                     return (

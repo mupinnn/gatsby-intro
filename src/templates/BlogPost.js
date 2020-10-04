@@ -2,6 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
 import Layout from "../components/Layout"
+import SEO from "../components/SEO"
 
 import postStyles from "./blogPost.module.scss"
 
@@ -28,6 +29,7 @@ export const query = graphql`
 export default function BlogPost(props) {
     return (
         <Layout>
+            <SEO title={props.data.markdownRemark.frontmatter.title} />
             <div className={postStyles.content}>
                 <h1>{props.data.markdownRemark.frontmatter.title}</h1>
                 <span className={postStyles.meta}>
